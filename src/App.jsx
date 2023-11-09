@@ -26,9 +26,9 @@ export function App () {
     <>
     <div className="stick"/>
     <div className="trafficLight">
-      <Light color="red" opacity="0.4"/>
-      <Light color="yellow" opacity="0.4"/>
-      <Light color="green" opacity="0.4"/>
+      <Light color="red" opacity={activeLight === "red" ? 1:0.4}/>
+      <Light color="yellow" opacity={activeLight === "yellow" ? 1:0.4}/>
+      <Light color="green"  opacity={activeLight === "green" ? 1:0.4}/>
       </div>
       <h1 style={{margin:"auto", width:"fit-content"}}>{activeLight}</h1>
     </>
