@@ -27,3 +27,11 @@ body{
     background-color: black;
     margin:auto;
 }
+button {
+    display:flex;
+    margin-top: 15px!important;
+    margin: auto;
+    background-color: burlywood;
+    font-size: larger;
+    font-weight: bolder;
+}

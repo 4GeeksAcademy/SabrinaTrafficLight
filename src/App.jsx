@@ -16,11 +16,29 @@ export function App () {
             break;
             case "green":
               setActiveLight("red");
+              default:
+                setActiveLight("red");
       }
     }, 3000);
-    return () => clearInterval(interval);
 
-  });
+    return () => clearInterval(interval);
+  }), [activeLight];
+
+  const handleButtonClick = () => {
+    switch (activeLight) {
+      case "red":
+        setActiveLight("yellow");
+        break;
+      case "yellow":
+        setActiveLight("green");
+        break;
+      case "green":
+        setActiveLight("red");
+        break;
+      default:
+        setActiveLight("red");
+    }
+  };
 
   return(
     <>
@@ -31,6 +49,7 @@ export function App () {
       <Light color="green"  opacity={activeLight === "green" ? 1:0.4}/>
       </div>
       <h1 style={{margin:"auto", width:"fit-content"}}>{activeLight}</h1>
+      <button onClick={handleButtonClick}>Cycle Light</button>
     </>
     
   )
