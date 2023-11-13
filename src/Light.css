@@ -20,6 +20,7 @@ body{
     border: 1px solid black;
     width: fit-content;
     margin: auto;
+    background-image: repeating-conic-gradient(black 10%, burlywood 20%);
 }
 .stick {
     width: 20px;
